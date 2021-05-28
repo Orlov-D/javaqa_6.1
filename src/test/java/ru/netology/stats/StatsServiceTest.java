@@ -61,8 +61,7 @@ class StatsServiceTest {
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 5;
 
-        int middleResult = service.averageSumSales(sales);
-        int actual = service.amountBelowAverage(sales, middleResult);
+        int actual = service.amountBelowAverage(sales);
 
         assertEquals(expected, actual);
     }
@@ -74,8 +73,7 @@ class StatsServiceTest {
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 5;
 
-        int middleResult = service.averageSumSales(sales);
-        int actual = service.amountAboveAverage(sales, middleResult);
+        int actual = service.amountAboveAverage(sales);
 
         assertEquals(expected, actual);
     }
