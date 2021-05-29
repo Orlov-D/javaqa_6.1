@@ -49,11 +49,13 @@ public class StatsService {
 
     public int amountBelowAverage(long[] sales) {
         int quantityOfMonth = 0;
-        int averageSum = 0;
-        for (long sale : sales) {
-            averageSum += sale;
-        }
-        averageSum = averageSum / sales.length;
+//        int averageSum = 0;
+//        for (long sale : sales) {
+//            averageSum += sale;
+//        }
+//        averageSum = averageSum / sales.length;
+        StatsService service = new StatsService();
+        int averageSum = service.averageSumSales(sales);
         for (long sale : sales) {
             if (sale < averageSum) {
                 quantityOfMonth++;
@@ -64,11 +66,8 @@ public class StatsService {
 
     public int amountAboveAverage(long[] sales) {
         int quantityOfMonth = 0;
-        int averageSum = 0;
-        for (long sale : sales) {
-            averageSum += sale;
-        }
-        averageSum = averageSum / sales.length;
+        StatsService service = new StatsService();
+        int averageSum = service.averageSumSales(sales);
         for (long sale : sales) {
             if (sale > averageSum) {
                 quantityOfMonth++;
