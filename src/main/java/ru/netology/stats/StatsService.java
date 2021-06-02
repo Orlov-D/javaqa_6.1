@@ -66,8 +66,7 @@ public class StatsService {
 
     public int amountAboveAverage(long[] sales) {
         int quantityOfMonth = 0;
-        StatsService service = new StatsService();
-        int averageSum = service.averageSumSales(sales);
+        int averageSum = this.averageSumSales(sales);
         for (long sale : sales) {
             if (sale > averageSum) {
                 quantityOfMonth++;
